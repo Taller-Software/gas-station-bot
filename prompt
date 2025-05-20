@@ -1,0 +1,13 @@
+Crea un bot de Telegram en Python que se integre con el punto de acceso público español para estaciones de servicio. El bot deberá responder a un comando (por ejemplo, /lowestprice) seguido de la ubicación del usuario (latitud y longitud). Al recibir el comando, el bot realizará lo siguiente:
+
+Integración con la API: Realizará una solicitud HTTP GET al punto de acceso público español para estaciones de servicio, enviando la ubicación del usuario para obtener datos sobre las estaciones cercanas. Analizará la respuesta en formato JSON para extraer los detalles necesarios (por ejemplo, nombre de la estación, dirección, precios del combustible y coordenadas geográficas).
+
+Procesamiento de datos: A partir de la lista de estaciones obtenidas, calculará las distancias desde la ubicación proporcionada por el usuario. Utilizará cálculos geoespaciales para encontrar las 10 estaciones más cercanas. Ordenará estas 10 estaciones por precio del combustible para encontrar la que ofrezca el precio más bajo.
+
+Respuesta del bot: Formateará un mensaje con los detalles de la estación con el precio más bajo, incluyendo su nombre, dirección, precio y una URL de Google Maps para obtener direcciones. El mensaje debe ser conciso pero informativo, permitiendo al usuario captar rápidamente los datos esenciales.
+
+Gestión de errores: Implementará un manejo de errores para situaciones como fallos en las solicitudes a la API, errores de análisis, o cuando no se encuentren estaciones dentro de una distancia razonable. En estos casos, proporcionará mensajes útiles al usuario.
+
+Optimizaciones y mejoras: Se asegurará de que el código esté optimizado para la eficiencia, especialmente en el manejo y procesamiento de los datos provenientes de la API. Incluirá comentarios en las secciones principales del código, explicando el propósito y la lógica de cada parte para facilitar su mantenimiento o expansión en el futuro.
+
+El objetivo de esta tarea es producir un código limpio, eficiente y legible, que se adhiera a los principios de diseño "pythónicos".
